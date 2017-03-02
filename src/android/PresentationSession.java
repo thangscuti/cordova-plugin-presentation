@@ -16,7 +16,7 @@
  * AUTHORS: Louay Bassbouss <louay.bassbouss@fokus.fraunhofer.de>
  *          Martin Lasak <martin.lasak@fokus.fraunhofer.de>
  */
-package de.fhg.fokus.famium.presentation;
+package es.hypertal.PresentationAPIPlugin;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;

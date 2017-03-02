@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 /*
+ * ****Modified by Hypetales, Copyright 2017****
+ *
  * Copyright 2014 Fraunhofer FOKUS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,14 +24,14 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="de.fhg.fokus.famium.presentation"
+    id="es.hypertal.PresentationAPIPlugin"
     version="0.0.2">
     <name>Presentation</name>
     <description>Cordova Presentation API Plugin</description>
     <license>Apache 2.0</license>
     <keywords>famium,cordova,presentation,presentation api,second screen,multi-screen,webscreens</keywords>
-    <repo>https://github.com/fraunhoferfokus/cordova-plugin-presentation.git</repo>
-    <issue>https://github.com/fraunhoferfokus/cordova-plugin-presentation/issues</issue>
+    <repo>https://github.com/meirsadan/cordova-plugin-presentation.git</repo>
+    <issue>https://github.com/meirsadan/cordova-plugin-presentation/issues</issue>
 
     <js-module src="www/presentation.js" name="presentation">
         <clobbers target="navigator.presentation" />
@@ -69,7 +71,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Presentation">
-                <param name="android-package" value="de.fhg.fokus.famium.presentation.CDVPresentationPlugin"/>
+                <param name="android-package" value="es.hypertal.PresentationAPIPlugin.CDVPresentationPlugin"/>
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">

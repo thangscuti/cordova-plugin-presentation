@@ -1,17 +1,15 @@
 
-# de.fhg.fokus.famium.presentation
+# es.hypertal.PresentationAPIPlugin
 
-(This is a modification of the existing Presentation API plugin for Hypertales)
+This is a modification of the original Presentation API plugin for Hypertales
 
-Project website: [Cordova Presentation API Plugin](http://fraunhoferfokus.github.io/cordova-plugin-presentation/
-)
-
-Sample app using this plugin: [HelloApp](http://fraunhoferfokus.github.io/cordova-plugin-presentation-helloapp/)
+Original Project website: [Cordova Presentation API Plugin](http://fraunhoferfokus.github.io/cordova-plugin-presentation/)
 
 Plugin documentation: [doc/index.md](doc/index.md)
 
-
 # License
+
+Copyright 2017 Hypertales
 
 Copyright 2014 Fraunhofer FOKUS
 
@@ -29,4 +27,5 @@ limitations under the License.
 
 ### Contact
 
+[Hypertales](http://hypertal.es/)
 [Fraunhofer FOKUS - Competence Center FAME // Future Applications and Media](http://www.fokus.fraunhofer.de/fame)

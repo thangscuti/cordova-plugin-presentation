@@ -23,7 +23,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:rim="http://www.blackberry.com/ns/widgets"
-    id="de.fhg.fokus.famium.presentation.tests"
+    id="es.hypertal.PresentationAPIPlugin.tests"
     version="0.0.1">
     <name>Presentation Tests</name>
     <license>Apache 2.0</license>
