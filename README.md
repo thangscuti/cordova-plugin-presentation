@@ -1,6 +1,8 @@
 
 # de.fhg.fokus.famium.presentation
 
+(This is a modification of the existing Presentation API plugin for Hypertales)
+
 Project website: [Cordova Presentation API Plugin](http://fraunhoferfokus.github.io/cordova-plugin-presentation/
 )
 
