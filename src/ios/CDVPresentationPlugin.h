@@ -19,7 +19,7 @@
 #ifndef CDVPresentationPlugin_h
 #define CDVPresentationPlugin_h
 
-#import <WebKit/WebKit.h>
+#import <UIKit/UIKit.h>
 #import <Cordova/CDVPlugin.h>
 
 #import "DevicePickerViewController.h"

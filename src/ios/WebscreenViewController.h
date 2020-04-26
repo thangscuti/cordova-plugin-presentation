@@ -25,7 +25,7 @@
 @protocol WebscreenDelegate ;
 
 
-@interface WebscreenViewController : WKViewController  <WKWebViewDelegate>
+@interface WebscreenViewController : UIViewController  <UIWebViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;
 @property (nonatomic, weak) id<WebscreenDelegate> delegate;
