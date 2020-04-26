@@ -15,7 +15,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-image: url("../img/stars.jpg");
+    background-image: url("../img/bg1.jpg");
     
 }
 
@@ -117,7 +117,7 @@ body[data-state = "disconnected"]  {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	background-image: url('../img/hypertales-launcher.png');
+	background-image: url('../img/AWA Logo.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center center;
