@@ -9,6 +9,8 @@ Plugin documentation: [doc/index.md](doc/index.md)
 
 # License
 
+Copyright 2020 MarkieBoy1991
+
 Copyright 2017 Hypertales
 
 Copyright 2014 Fraunhofer FOKUS
