@@ -23,7 +23,7 @@
 
 @interface WebscreenViewController () <JCWebViewDelegate>
 
- @property (strong) UIWebView *webView;
+ @property (strong) WKWebView *webView;
  @property (strong) JSContext *ctx;
 
 @end
@@ -55,7 +55,7 @@
         return;
     }
 
-    self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
     self.webView.delegate=self;
     self.webView.hidden=NO;
     self.webView.autoresizesSubviews = YES;
@@ -76,7 +76,7 @@
     return NO;
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+- (void)webView:(WKWebView *)webView didFailLoadWithError:(NSError *)error
 {
     // Display some error message in case the page to be presented cannot be accessed
     NSString *html = [NSString stringWithFormat:@"<html><body style=\"margin-top: 50%%; background-color: #ffffff; color: #dddddd; font-family: Helvetica; font-size: 48pt; text-align:center; word-wrap: break-word;\">%@<br><span style=\"font-size: 24pt;\">code: %ld</span></body></html>", error.localizedDescription, (long)error.code];
@@ -100,7 +100,7 @@
     [self.webView loadRequest:requestObj];
 }
 
-- (void) webViewDidFinishLoad:(UIWebView *)webView
+- (void) webViewDidFinishLoad:(WKWebView *)webView
 {
     NSLog(@"Called webViewDidFinishLoad");
 
@@ -110,7 +110,7 @@
     [self.delegate webscreenDidLoadUrl:self.sid];
 }
 
-- (void)webView:(UIWebView *)webView didCreateJavaScriptContext:(JSContext *)ctx
+- (void)webView:(WKWebView *)webView didCreateJavaScriptContext:(JSContext *)ctx
 {
     NSLog(@"Got context in Webscreen!");
     self.ctx = ctx;

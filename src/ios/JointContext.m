@@ -25,7 +25,7 @@ static const char kJCJavaScriptContext[] = "jc_javaScriptContext";
 
 static NSHashTable* g_webViews = nil;
 
-@interface UIWebView (JC_JavaScriptCore_private)
+@interface WKWebView (JC_JavaScriptCore_private)
 - (void) jc_didCreateJavaScriptContext:(JSContext *)jc_javaScriptContext;
 @end
 
@@ -45,7 +45,7 @@ static NSHashTable* g_webViews = nil;
 
     void (^notifyDidCreateJavaScriptContext)() = ^{
 
-        for ( UIWebView* webView in g_webViews )
+        for ( WKWebView* webView in g_webViews )
         {
             NSString* cookie = [NSString stringWithFormat: @"jc_jscWebView_%lud", (unsigned long)webView.hash ];
 
@@ -72,7 +72,7 @@ static NSHashTable* g_webViews = nil;
 @end
 
 
-@implementation UIWebView (JC_JavaScriptContext)
+@implementation WKWebView (JC_JavaScriptContext)
 
 + (id) allocWithZone:(struct _NSZone *)zone
 {

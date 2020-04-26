@@ -19,18 +19,18 @@
 #ifndef JointContext_h
 #define JointContext_h
 
-#import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 #import <JavaScriptCore/JavaScriptCore.h>
 
-@protocol JCWebViewDelegate <UIWebViewDelegate>
+@protocol JCWebViewDelegate <WKWebViewDelegate>
 
 @optional
 
-- (void)webView:(UIWebView *)webView didCreateJavaScriptContext:(JSContext*) ctx;
+- (void)webView:(WKWebView *)webView didCreateJavaScriptContext:(JSContext*) ctx;
 
 @end
 
-@interface UIWebView (JC_JavaScriptContext)
+@interface WKWebView (JC_JavaScriptContext)
 
 @property (nonatomic, readonly) JSContext* jc_javaScriptContext;
 
