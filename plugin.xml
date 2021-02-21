@@ -71,14 +71,14 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Presentation">
-                <param name="android-package" value="org.apache.cordova.plugin.presentation"/>
+                <param name="android-package" value="org.apache.cordova.presentation.PresentationPlugin"/>
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.INTERNET" />
         </config-file>
 
-       <source-file src="src/android/CDVPresentationPlugin.java" target-dir="src/de/fhg/fokus/famium/presentation" />
+       <source-file src="src/android/PresentationPlugin.java" target-dir="src/de/fhg/fokus/famium/presentation" />
 	   <source-file src="src/android/PresentationSession.java" target-dir="src/de/fhg/fokus/famium/presentation" />
 	   <source-file src="src/android/NavigatorPresentationJS.java" target-dir="src/de/fhg/fokus/famium/presentation" />
 	   <source-file src="src/android/SecondScreenPresentation.java" target-dir="src/de/fhg/fokus/famium/presentation" />

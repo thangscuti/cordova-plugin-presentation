@@ -16,7 +16,7 @@
  * AUTHORS: Louay Bassbouss <louay.bassbouss@fokus.fraunhofer.de>
  *          Martin Lasak <martin.lasak@fokus.fraunhofer.de>
  */
-package org.apache.cordova.plugin;
+package org.apache.cordova.presentation;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
@@ -97,7 +97,7 @@ public class PresentationSession {
 		String oldState = this.state;
 		this.state = state;
 		if (!state.equals(oldState)) {
-			CDVPresentationPlugin.sendSessionResult(PresentationSession.this, "onstatechange", getState());
+			PresentationPlugin.sendSessionResult(PresentationSession.this, "onstatechange", getState());
 			getActivity().runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
@@ -151,7 +151,7 @@ public class PresentationSession {
 				});
 			}
 			else{
-				CDVPresentationPlugin.sendSessionResult(PresentationSession.this, "onmessage", msg);
+				PresentationPlugin.sendSessionResult(PresentationSession.this, "onmessage", msg);
 			}
 		}
 	}

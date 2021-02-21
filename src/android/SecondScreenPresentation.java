@@ -16,7 +16,7 @@
  * AUTHORS: Louay Bassbouss <louay.bassbouss@fokus.fraunhofer.de>
  *          Martin Lasak <martin.lasak@fokus.fraunhofer.de>
  */
-package org.apache.cordova.plugin;
+package org.apache.cordova.presentation;
 
 import android.app.Activity;
 import android.app.Presentation;

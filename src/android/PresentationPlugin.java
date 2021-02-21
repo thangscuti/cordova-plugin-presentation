@@ -16,7 +16,7 @@
  * AUTHORS: Louay Bassbouss <louay.bassbouss@fokus.fraunhofer.de>
  *          Martin Lasak <martin.lasak@fokus.fraunhofer.de>
  */
-package org.apache.cordova.plugin;
+package org.apache.cordova.presentation;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -41,8 +41,8 @@ import android.view.Display;
 /**
  * Entry Class for Presentation API Cordova Plugin. This Plugin implements the W3C Presentation API as described in the final report  {@link http://www.w3.org/2014/secondscreen/presentation-api/20140721/} of the Second Screen Presentation API Community Group.
  */
-public class CDVPresentationPlugin extends CordovaPlugin implements DisplayManager.DisplayListener{
-	private static final String LOG_TAG = "CDVPresentationPlugin";
+public class PresentationPlugin extends CordovaPlugin implements DisplayManager.DisplayListener{
+	private static final String LOG_TAG = "PresentationPlugin";
 	private CallbackContext availableChangeCallbackContext;
 	private Map<String, PresentationSession> sessions;
 	private Map<Integer, SecondScreenPresentation> presentations;
