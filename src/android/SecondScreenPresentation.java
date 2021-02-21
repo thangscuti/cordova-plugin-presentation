@@ -16,7 +16,7 @@
  * AUTHORS: Louay Bassbouss <louay.bassbouss@fokus.fraunhofer.de>
  *          Martin Lasak <martin.lasak@fokus.fraunhofer.de>
  */
-package es.hypertal.PresentationAPIPlugin;
+package org.apache.cordova.plugin;
 
 import android.app.Activity;
 import android.app.Presentation;

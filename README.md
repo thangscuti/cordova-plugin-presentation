@@ -1,5 +1,5 @@
 
-# es.hypertal.PresentationAPIPlugin
+# cordova-plugin-presentation
 
 This is a modification of the original Presentation API plugin for Hypertales
 
