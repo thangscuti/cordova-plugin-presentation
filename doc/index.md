@@ -19,7 +19,7 @@
  */
 -->
 
-# de.fhg.fokus.famium.presentation
+# cordova-plugin-presentation
 
 This plugin provides an API that allows to access external presentation-type
 displays and use them for presenting web content. This implementation is
@@ -39,7 +39,7 @@ For simplicity reasons the following terminology is assumed:
 
 ## Installation
 
-    cordova plugin add de.fhg.fokus.famium.presentation
+    cordova plugin add cordova-plugin-presentation
 
 Note: After installation the plugin is available to the Cordova application
 when the ```deviceready```has been fired. Before this event has not been fired there is not guarantee on the availability of this plugin and the Presentation API.

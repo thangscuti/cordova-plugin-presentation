@@ -24,14 +24,14 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="es.hypertal.PresentationAPIPlugin"
-    version="0.0.2">
+    id="cordova-plugin-presentation"
+    version="1.0.0">
     <name>Presentation</name>
     <description>Cordova Presentation API Plugin</description>
     <license>Apache 2.0</license>
     <keywords>famium,cordova,presentation,presentation api,second screen,multi-screen,webscreens</keywords>
-    <repo>https://github.com/meirsadan/cordova-plugin-presentation.git</repo>
-    <issue>https://github.com/meirsadan/cordova-plugin-presentation/issues</issue>
+    <repo>https://github.com/huangang/cordova-plugin-presentation.git</repo>
+    <issue>https://github.com/huangang/cordova-plugin-presentation/issues</issue>
 
     <js-module src="www/presentation.js" name="presentation">
         <clobbers target="navigator.presentation" />
@@ -71,7 +71,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Presentation">
-                <param name="android-package" value="es.hypertal.PresentationAPIPlugin.CDVPresentationPlugin"/>
+                <param name="android-package" value="org.apache.cordova.plugin.presentation"/>
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">

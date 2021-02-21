@@ -1,0 +1,34 @@
+{
+    "name": "cordova-plugin-presentation",
+    "version": "1.0.0",
+    "description": "Cordova Presentation API Plugin",
+    "cordova": {
+      "id": "cordova-plugin-presentation",
+      "platforms": [
+        "ios",
+        "android"
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/huangang/cordova-plugin-presentation.git"
+    },
+    "keywords": [
+      "famium",
+      "cordova",
+      "presentation",
+      "presentation api",
+      "second screen",
+      "multi-screen",
+      "webscreens",
+      "ecosystem:cordova",
+      "cordova-ios",
+      "cordova-android"
+    ],
+    "author": "huangang",
+    "license": "Apache 2.0",
+    "bugs": {
+      "url": "https://github.com/huangang/cordova-plugin-presentation/issues"
+    },
+    "homepage": "https://github.com/huangang/cordova-plugin-presentation#readme"
+  }
