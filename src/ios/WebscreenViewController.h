@@ -21,11 +21,12 @@
 
 #import <UIKit/UIKit.h>
 #import "PresentationSession.h"
+#import <WebKit/WebKit.h>
 
 @protocol WebscreenDelegate ;
 
 
-@interface WebscreenViewController : UIViewController  <UIWebViewDelegate>
+@interface WebscreenViewController : UIViewController  <WKNavigationDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;
 @property (nonatomic, weak) id<WebscreenDelegate> delegate;

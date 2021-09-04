@@ -53,7 +53,7 @@
 
 - (void)postMessage :(NSString *) message
 {
-    NSLog(@"PresentationSession postMessage");
+    NSLog(@"PresentationSession close");
     [self.delegate msgPosted:self.sid withMsg:message];
 }
 

@@ -21,16 +21,17 @@
 
 #import <UIKit/UIKit.h>
 #import <JavaScriptCore/JavaScriptCore.h>
+#import <WebKit/WebKit.h>
 
-@protocol JCWebViewDelegate <UIWebViewDelegate>
+@protocol JCWebViewDelegate <WKNavigationDelegate>
 
 @optional
 
-- (void)webView:(UIWebView *)webView didCreateJavaScriptContext:(JSContext*) ctx;
+- (void)webView:(WKWebView *)webView didCreateJavaScriptContext:(JSContext*) ctx;
 
 @end
 
-@interface UIWebView (JC_JavaScriptContext)
+@interface WKWebView (JC_JavaScriptContext)
 
 @property (nonatomic, readonly) JSContext* jc_javaScriptContext;
 

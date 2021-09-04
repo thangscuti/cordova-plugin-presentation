@@ -20,12 +20,13 @@
 
 #import <JavaScriptCore/JavaScriptCore.h>
 #import <objc/runtime.h>
+#import <WebKit/WebKit.h>
 
 static const char kJCJavaScriptContext[] = "jc_javaScriptContext";
 
 static NSHashTable* g_webViews = nil;
 
-@interface UIWebView (JC_JavaScriptCore_private)
+@interface WKWebView (JC_JavaScriptCore_private)
 - (void) jc_didCreateJavaScriptContext:(JSContext *)jc_javaScriptContext;
 @end
 
@@ -37,6 +38,7 @@ static NSHashTable* g_webViews = nil;
 
 - (void) webView: (id) unused didCreateJavaScriptContext: (JSContext*) ctx forFrame: (id<JCWebFrame>) frame
 {
+    NSLog(@"didCreateJavaScriptContext::");
     NSParameterAssert( [frame respondsToSelector: @selector( parentFrame )] );
 
     // only interested in root-level frames
@@ -45,11 +47,11 @@ static NSHashTable* g_webViews = nil;
 
     void (^notifyDidCreateJavaScriptContext)() = ^{
 
-        for ( UIWebView* webView in g_webViews )
+        for ( WKWebView* webView in g_webViews )
         {
             NSString* cookie = [NSString stringWithFormat: @"jc_jscWebView_%lud", (unsigned long)webView.hash ];
 
-            [webView stringByEvaluatingJavaScriptFromString: [NSString stringWithFormat: @"var %@ = '%@'", cookie, cookie ] ];
+//            [webView stringByEvaluatingJavaScriptFromString: [NSString stringWithFormat: @"var %@ = '%@'", cookie, cookie ] ];
 
             if ( [ctx[cookie].toString isEqualToString: cookie] )
             {
@@ -72,7 +74,7 @@ static NSHashTable* g_webViews = nil;
 @end
 
 
-@implementation UIWebView (JC_JavaScriptContext)
+@implementation WKWebView (JC_JavaScriptContext)
 
 + (id) allocWithZone:(struct _NSZone *)zone
 {
@@ -99,9 +101,9 @@ static NSHashTable* g_webViews = nil;
 
     [self didChangeValueForKey: @"jc_javaScriptContext"];
 
-    if ( [self.delegate respondsToSelector: @selector(webView:didCreateJavaScriptContext:)] )
+    if ( [self.navigationDelegate respondsToSelector: @selector(webView:didCreateJavaScriptContext:)] )
     {
-        id<JCWebViewDelegate> delegate = ( id<JCWebViewDelegate>)self.delegate;
+        id<JCWebViewDelegate> delegate = ( id<JCWebViewDelegate>)self.navigationDelegate;
         [delegate webView: self didCreateJavaScriptContext: jc_javaScriptContext];
     }
 }

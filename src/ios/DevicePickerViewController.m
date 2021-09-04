@@ -54,7 +54,7 @@
     self.table.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:self.table];
 
-    self.title = @"Display Selection";
+    self.title = @"Screen Selection";
 
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonPressed:)];
     [self.navigationItem setRightBarButtonItem:doneButton];
@@ -71,7 +71,7 @@
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if ([self.screens count] > 0) {
-        return @"Available displays";
+        return @"Available screens";
     }
     return @"";
 }
@@ -79,10 +79,10 @@
 -(NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
     if ([self.screens count] > 0) {
-    return @"Please select your display to start.";
+    return @"Please select one of the above screens to start your Webscreen presentation on.";
     }
 
-    return @"No display is available. Please attach a video cable to this device or activate AirPlay.";
+    return @"No screen is available. Please attach a video cable to this device or activate wireless screen mirroring (e.g. AirPlay).";
 }
 
 
@@ -104,16 +104,15 @@
     cell.imageView.image = nil;
 
     if(self.screens.count==0){
-        cell.textLabel.text =  @"No displays connected.";
+        cell.textLabel.text =  @"No screens connected.";
         [cell setUserInteractionEnabled:false];
         cell.textLabel.textColor = [UIColor grayColor];
     } else {
 
         WebscreenViewController *wvc = [self.screens objectAtIndex:indexPath.row];
-//      UIScreen *screen = wvc.window.screen;
+        UIScreen *screen = wvc.window.screen;
         cell.textLabel.text = [NSString stringWithFormat:@"Display: #%@",[wvc.screenId substringFromIndex:31]];
-//      cell.detailTextLabel.text = [NSString stringWithFormat:@"Apple TV or Cable at resolution %@",NSStringFromCGSize(screen.bounds.size)];
-        cell.detailTextLabel.text = @"";
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Apple TV or Cable at resolution %@",NSStringFromCGSize(screen.bounds.size)];
         cell.detailTextLabel.textColor = [UIColor grayColor];
     }
 

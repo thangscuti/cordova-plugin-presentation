@@ -46,6 +46,7 @@
                  <param name="ios-package" value="CDVPresentationPlugin" />
              </feature>
          </config-file>
+         <pod name="GCDWebServer" spec="~> 3.0" />
           <header-file src="src/ios/CDVPresentationPlugin.h" />
           <source-file src="src/ios/CDVPresentationPlugin.m" />
           <header-file src="src/ios/DevicePickerViewController.h" />

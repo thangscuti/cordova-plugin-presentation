@@ -109,13 +109,10 @@
         if( self.alert != nil) {
             [self.alert dismissWithClickedButtonIndex:0 animated:NO];
         }
-        self.alert = [[UIAlertView alloc] initWithTitle:@"Displays"
+        self.alert = [[UIAlertView alloc] initWithTitle:@"Presentation"
                                                 message:@"No screens available. Attach to one." delegate:self cancelButtonTitle:@"OK"
                                       otherButtonTitles:nil, nil];
         [self.alert show];
-    } else if (self.screensAvailable == 1) {
-	    WebscreenViewController *wvc = [self.screens objectAtIndex:0];
-        [self startScreen:wvc forSession:newSession.sid];
     } else {
         // Show a picker view to the user for screen selection
         if(self.navi == nil) {
@@ -305,37 +302,6 @@
 //                [secondWindow.rootViewController presentViewController:newwvc animated:YES completion:nil];
 //
 //            }];
-        }
-    }
-}
-
--(void)startScreen:(WebscreenViewController *)defaultwvc forSession:(NSString *)sid
-{
-    NSLog(@"Called startScreen");
-    
-    // Store refs to screen and webscreen
-    PresentationSession * ps = [self.sessions objectForKey:sid];
-    if (ps){
-        UIWindow *secondWindow=defaultwvc.window;
-        if (secondWindow) {
-            // Attach session id to the selected screen
-            defaultwvc.sid = sid;
-            
-            WebscreenViewController * newwvc = [[WebscreenViewController alloc] initWithSid:sid];
-            newwvc.delegate = self;
-            newwvc.session = ps;
-            [self.webscreens setObject:newwvc forKey:sid];
-            
-            secondWindow.rootViewController = newwvc;
-            
-            //            // Hide the default display
-            //            [secondWindow.rootViewController dismissViewControllerAnimated:YES completion:^{
-            //
-            //                //Now, finally, set up Webscreen and start the fun...
-            //
-            //                [secondWindow.rootViewController presentViewController:newwvc animated:YES completion:nil];
-            //
-            //            }];
         }
     }
 }

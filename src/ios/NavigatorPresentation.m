@@ -28,6 +28,7 @@
 
 -(NavigatorPresentation *)initWithSession:(PresentationSession *)session
 {
+    NSLog(@"NavigatorPresentation:initWithSession");
     self = [super init];
     self.session = session;
     //[self addObserver:self forKeyPath:@"onpresent"];
